@@ -48,6 +48,45 @@ You can retrieve an element from a specific index of an array using the followin
 System.out.println(arr[0]); // Prints the first element of the array.
 ```
 
+### Looping Through an Array
+You can loop through an array using different types of loops such as `for`, `while`, and `for-each` loops.
+
+#### Using a For Loop
+```java
+int[] arr = {2, 3, 5, 7, 10};
+for (int i = 0; i < arr.length; i++) {
+    System.out.println(arr[i]);
+}
+```
+
+#### Using a While Loop
+```java
+int[] arr = {2, 3, 5, 7, 10};
+int i = 0;
+while (i < arr.length) {
+    System.out.println(arr[i]);
+    i++;
+}
+```
+
+#### Using a For-Each Loop
+```java
+int[] arr = {2, 3, 5, 7, 10};
+for (int num : arr) {
+    System.out.println(num);
+}
+```
+
+### Example: Print Sum of Elements of an Array
+```java
+int[] arr = {2, 3, 5, 7, 10};
+int sum = 0;
+for (int num : arr) {
+    sum += num;
+}
+System.out.println("Sum of elements: " + sum);
+```
+
 ### Double Dimensional Array
 A double dimensional array is a list of elements stored in a matrix format (rows and columns). It is also referred to as a 2D array.
 
@@ -93,4 +132,37 @@ arr[0][0] = 1; // The first element of the first row will be 1.
 You can retrieve an element from a specific row and column index of a 2D array using the following syntax:
 ```java
 System.out.println(arr[0][0]); // Prints the first element of the first row.
+```
+
+### Looping Through a 2D Array
+You can loop through a 2D array using nested loops.
+
+#### Using Nested For Loops
+```java
+int[][] arr = {
+    {1, 2, 3},
+    {4, 5, 6},
+    {7, 8, 9}
+};
+for (int i = 0; i < arr.length; i++) {
+    for (int j = 0; j < arr[i].length; j++) {
+        System.out.println(arr[i][j]);
+    }
+}
+```
+
+### Example: Print Sum of Elements of a 2D Array
+```java
+int[][] arr = {
+    {1, 2, 3},
+    {4, 5, 6},
+    {7, 8, 9}
+};
+int sum = 0;
+for (int i = 0; i < arr.length; i++) {
+    for (int j = 0; j < arr[i].length; j++) {
+        sum += arr[i][j];
+    }
+}
+System.out.println("Sum of elements: " + sum);
 ```
